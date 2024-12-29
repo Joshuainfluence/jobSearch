@@ -11,6 +11,7 @@
 // Route::get('/contact', 'ContactController@index')->name('contact');
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobController;
@@ -23,3 +24,5 @@ Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [JobController::class, 'index'])->name('jobs.index');
 Route::get('/about', [AboutController::class, 'index'])->name('about.index');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
+
