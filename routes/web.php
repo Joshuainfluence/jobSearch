@@ -10,7 +10,7 @@
 // Route::get('/categories', 'CategoryController@index')->name('categories.index');
 // Route::get('/contact', 'ContactController@index')->name('contact');
 
-
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +20,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('index');
 Route::get('/home', [JobController::class, 'index'])->name('jobs.index');
+Route::get('/about', [AboutController::class, 'index'])->name('about.index');
