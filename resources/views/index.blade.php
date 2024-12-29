@@ -7,5 +7,6 @@
         <x-category />
         <x-about />
         <x-jobs />
+        <x-testimonial />
     {{-- @endsection --}}
 @endsection
