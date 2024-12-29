@@ -6,5 +6,6 @@
         <x-search />
         <x-category />
         <x-about />
+        <x-jobs />
     {{-- @endsection --}}
 @endsection
