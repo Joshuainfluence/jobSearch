@@ -4,5 +4,6 @@
     @section('content')
         <x-carousel />
         <x-search />
+        <x-category />
     {{-- @endsection --}}
 @endsection
