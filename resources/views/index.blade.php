@@ -5,5 +5,6 @@
         <x-carousel />
         <x-search />
         <x-category />
+        <x-about />
     {{-- @endsection --}}
 @endsection
