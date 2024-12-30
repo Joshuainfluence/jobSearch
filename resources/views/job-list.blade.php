@@ -3,6 +3,6 @@
 @section('title', 'Job-List - Job Portal')
 
 @section('content')
-    <x-header title="JOb List" />
+    <x-header title="Job List" />
     <x-jobs />
 @endsection
