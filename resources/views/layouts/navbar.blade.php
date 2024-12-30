@@ -13,7 +13,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Jobs</a>
                 <div class="dropdown-menu rounded-0 m-0">
                     <a href="job-list" class="dropdown-item">Job List</a>
-                    <a href="job-detail.html" class="dropdown-item">Job Detail</a>
+                    <a href="job-details" class="dropdown-item">Job Detail</a>
                 </div>
             </div>
             <div class="nav-item dropdown">
