@@ -52,19 +52,20 @@
 
                 <div class="">
                     <h4 class="mb-4">Apply For The Job</h4>
-                    <form>
+                    <form action="{{route('applications.store')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="row g-3">
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control" placeholder="Your First name">
+                                <input type="text" name="first_name" class="form-control" placeholder="Your First name">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="text" class="form-control" placeholder="Your Last name">
+                                <input type="text" name="last_name" class="form-control" placeholder="Your Last name">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="email" class="form-control" placeholder="Your Email">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email">
                             </div>
                             <div class="col-12 col-sm-6">
-                                <input type="number" class="form-control" placeholder="Your Phone number">
+                                <input type="number" name="phone" class="form-control" placeholder="Your Phone number">
                             </div>
                             {{-- <div class="col-12 col-sm-6">
                                 <input type="text" class="form-control" placeholder="Portfolio Website">
@@ -72,7 +73,7 @@
 
                             <div class="col-12 col-sm-6">
                                 <label for="frontBill">Upload bill (Front)</label>
-                                <input type="file" class="form-control bg-white" id="frontBill"
+                                <input type="file" name="front_bill" class="form-control bg-white" id="frontBill"
                                     onchange="previewImage(this, 'frontPreview')">
                                 <div class="mt-2">
                                     <img id="frontPreview" src="" alt="Front Bill Preview"
@@ -81,7 +82,7 @@
                             </div>
                             <div class="col-12 col-sm-6">
                                 <label for="backBill">Upload bill (Back)</label>
-                                <input type="file" class="form-control bg-white" id="backBill"
+                                <input type="file" name="back_bill" class="form-control bg-white" id="backBill"
                                     onchange="previewImage(this, 'backPreview')">
                                 <div class="mt-2">
                                     <img id="backPreview" src="" alt="Back Bill Preview"
@@ -89,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <textarea class="form-control" rows="5" placeholder="Coverletter"></textarea>
+                                <textarea class="form-control" name="cover_letter" rows="5" placeholder="Coverletter"></textarea>
                             </div>
                             <div class="col-12">
                                 <button class="btn btn-primary w-100" type="submit">Apply Now</button>

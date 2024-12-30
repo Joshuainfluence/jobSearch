@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Application;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
@@ -27,7 +28,30 @@ class ApplicationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'email' => 'required|email',
+            'phone' => 'required|string',
+            'front_bill' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'back_bill' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'cover_letter' => 'required|string'
+        ]);
+
+        $frontBill = $request->file('front_bill')->store('bills', 'public');
+        $backBill = $request->file('back_bill')->store('bills', 'public');
+
+        Application::create([
+            'first_name' => $validated['first_name'],
+            'last_name' => $validated['last_name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'front_bill' => $frontBill,
+            'back_bill' => $backBill,
+            'cover_letter' => $validated['cover_letter']
+        ]);
+
+        return redirect()->back()->with('success', 'Application submitted successfully!');
     }
 
     /**
