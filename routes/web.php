@@ -42,6 +42,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('applications', App\Http\Controllers\Admin\ApplicationController::class);
     Route::resource('jobs', App\Http\Controllers\Admin\JobController::class);
+    Route::resource('users', \App\Http\Controllers\Admin\UserController::class);
 });
 // ->middleware(['auth'])
 
