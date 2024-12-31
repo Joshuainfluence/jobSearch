@@ -9,14 +9,20 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up()
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->text('description');
+            $table->string('company');
+            $table->string('location');
+            $table->string('type'); // full-time, part-time, etc.
+            $table->decimal('salary', 10, 2)->nullable();
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
-
     /**
      * Reverse the migrations.
      */
