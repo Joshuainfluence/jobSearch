@@ -38,11 +38,12 @@ Route::post('/applications', [ApplicationController::class, 'store'])->name('app
 
 
 // Admin Routes
-Route::prefix('admin')->name('admin.')->middleware(['auth'])->group(function () {
+Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/', [App\Http\Controllers\Admin\DashboardController::class, 'index'])->name('dashboard');
     Route::resource('applications', App\Http\Controllers\Admin\ApplicationController::class);
     Route::resource('jobs', App\Http\Controllers\Admin\JobController::class);
 });
+// ->middleware(['auth'])
 
 
 
