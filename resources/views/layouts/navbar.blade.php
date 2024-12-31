@@ -42,7 +42,13 @@
         <div class="navbar-nav ms-auto p-4 p-lg-0">
             <a href="/" class="nav-item nav-link">Home</a>
             <a href="/about" class="nav-item nav-link">About</a>
-            <div class="nav-item dropdown">
+            <a href="/job-list" class="nav-item nav-link">Job list</a>
+            <a href="/category" class="nav-item nav-link">Job Category</a>
+            <a href="/testimonial" class="nav-item nav-link">Testimonial</a>
+
+
+
+            {{-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" id="jobsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Jobs</a>
                 <div class="dropdown-menu" aria-labelledby="jobsDropdown">
                     <a href="/job-list" class="dropdown-item">Job List</a>
@@ -56,7 +62,23 @@
                     <a href="/testimonial" class="dropdown-item">Testimonial</a>
                     <a href="/404.html" class="dropdown-item">404</a>
                 </div>
+            </div> --}}
+            {{-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Jobs</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="job-list">Job List</a></li>
+                    <li><a class="dropdown-item" href="job-details">Job Detail</a></li>
+                </ul>
             </div>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false">Pages</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="category">Job Category</a></li>
+                    <li><a class="dropdown-item" href="testimonial">Testimonial</a></li>
+                    <li><a class="dropdown-item" href="404.html">404</a></li>
+                </ul>
+            </div> --}}
+            
             <a href="/contact" class="nav-item nav-link">Contact</a>
         </div>
         <a href="/post-job" class="btn btn-primary rounded-0 py-4 px-lg-5 d-none d-lg-block">
@@ -67,6 +89,33 @@
 
 
 <style>
+    /* Fix dropdown overflow */
+.nav-item .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Place below the parent link */
+    left: 0;
+    z-index: 1050; /* Ensure it's above other elements */
+    margin-top: 0.5rem; /* Add space between link and dropdown */
+    width: auto; /* Default width */
+    min-width: 200px; /* Set a minimum width */
+}
+
+/* Prevent navbar overflow caused by dropdowns */
+.navbar-nav {
+    overflow: visible !important;
+}
+
+/* Prevent scrollbars in the navbar */
+.navbar-collapse {
+    overflow: hidden !important;
+}
+
+
+    /* Ensure navbar stays within view on desktop */
+.navbar {
+    overflow: visible !important; /* Prevent scrollbars */
+}
+
    /* Slide-in Navbar for Mobile */
    /* Slide-in Navbar for Mobile */
 .navbar-collapse {
