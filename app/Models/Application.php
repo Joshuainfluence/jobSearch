@@ -15,4 +15,9 @@ class Application extends Model
         'back_bill',
         'cover_letter'
     ];
+
+    public function job()
+    {
+        return $this->belongsTo(Job::class);
+    }
 }
