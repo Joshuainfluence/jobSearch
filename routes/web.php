@@ -4,6 +4,7 @@
 // use App\Http\Controllers\ApplicationController;
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
@@ -25,7 +26,7 @@ Route::get('/job-list', [JobListController::class, 'index'])->name('job-lsit');
 Route::get('/testimonial', [TestimonialController::class, 'index'])->name('testimonial');
 Route::get('/job-details', [JobDetailsController::class, 'index'])->name('job-details');
 
-
+Route::post('/applications', [ApplicationController::class, 'store'])->name('applications.store');
 
 
 
