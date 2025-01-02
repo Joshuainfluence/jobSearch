@@ -25,6 +25,11 @@
                                 <i class="fas fa-tachometer-alt"></i> Dashboard
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="">
+                                <i class="fas fa-user"></i> View Applications
+                            </a>
+                        </li>
                         {{-- <li class="nav-item">
                             <a class="nav-link text-white" href="{{ route('admin.applications.index') }}">
                                 <i class="fas fa-file-alt"></i> Applications
