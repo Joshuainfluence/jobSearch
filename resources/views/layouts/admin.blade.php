@@ -40,6 +40,11 @@
                                 <i class="fas fa-briefcase"></i> Jobs
                             </a>
                         </li> --}}
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ route('admin.jobs.index') }}">
+                                <i class="fas fa-briefcase"></i> Jobs
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
