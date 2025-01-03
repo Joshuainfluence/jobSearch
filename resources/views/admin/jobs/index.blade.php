@@ -6,9 +6,9 @@
 <div class="container-fluid py-4">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="h2">Manage Jobs</h1>
-        {{-- <a href="{{ route('admin.jobs.create') }}" class="btn btn-primary">
+        <a href="{{ route('admin.jobs.create') }}" class="btn btn-primary">
             <i class="fas fa-plus"></i> Add New Job
-        </a> --}}
+        </a>
     </div>
     
     <div class="card">
